@@ -1,0 +1,82 @@
+<div>
+    <div class="widget-poups">
+        <form name="_form" class="form-horizontal ng-valid-maxlength ng-invalid ng-invalid-required ng-dirty ng-valid-parse" novalidate="">
+            <div class="modal-header">
+                <!--<button type="button" class="close" ng-click="dismiss()" aria-hidden="true">&times;</button>-->
+                <div type="button" class="close-button" ng-click="dismiss()" aria-hidden="true">×</div>
+                <h3>Widget Settings</h3>
+            </div>
+
+            <div class="modal-body">
+            	<div class="col-lg-12 col-md-12">
+	                <div class="form-group" ng-class="{error: _form.name.$error &amp;&amp; _form.submitted}">
+	                    <label class="control-label col-lg-3 col-md-3 col-sm-3">Title</label>
+	                    <div class="col-lg-9 col-md-9 col-sm-9">
+	                        <input name="name" type="text" ng-model="form.name" maxlength="45" placeholder="Title*" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required ng-valid-maxlength" required="">
+	                    </div>
+	                </div>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                    <div class="form-group" ng-class="{error: _form.formula.$error &amp;&amp; _form.submitted}">
+                        <label class="control-label col-lg-3 col-md-3 col-sm-3">Select Formula</label>
+                        <div class="col-lg-9 col-md-9 col-sm-9">
+                            <select name="formula" ng-model="data.formula" class="form-control ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required ng-touched" required="" ng-options="formula.FormulaTitle for formula in form.formula track by formula.FormulaId"><option disabled="" value="" selected="selected">None*</option><option label=" (AVGTempDC1) a" value="75"> (AVGTempDC1) a</option><option label=" (BreakerCap) ASB" value="31" selected="selected"> (BreakerCap) ASB</option><option label=" (BreakerCap) Avg" value="32"> (BreakerCap) Avg</option><option label=" (Factory) SUMMY1" value="70"> (Factory) SUMMY1</option><option label=" (Factory) SUMMY1Copy" value="71"> (Factory) SUMMY1Copy</option><option label=" (FormulaDemo) FinalFormula" value="29"> (FormulaDemo) FinalFormula</option><option label=" (FormulaDemo) IsAvgOverThresh" value="27"> (FormulaDemo) IsAvgOverThresh</option><option label=" (FormulaDemo) IsCab2OverAmpsSpike" value="28"> (FormulaDemo) IsCab2OverAmpsSpike</option><option label=" (GG) AVT" value="85"> (GG) AVT</option><option label=" (GG) T" value="84"> (GG) T</option><option label=" (IsleTemps) Average Cold Isle" value="11"> (IsleTemps) Average Cold Isle</option><option label=" (IsleTemps) Average Hot Isle" value="12"> (IsleTemps) Average Hot Isle</option><option label=" (IsleTemps) formula test1" value="15"> (IsleTemps) formula test1</option><option label=" (IsleTemps) Pod1 Cold Isle" value="7"> (IsleTemps) Pod1 Cold Isle</option><option label=" (IsleTemps) Pod1 Hot Isle" value="4"> (IsleTemps) Pod1 Hot Isle</option><option label=" (IsleTemps) Pod2 Cold Isle" value="8"> (IsleTemps) Pod2 Cold Isle</option><option label=" (IsleTemps) Pod2 Hot Isle" value="5"> (IsleTemps) Pod2 Hot Isle</option><option label=" (IsleTemps) Pod2 Hot Isle  1" value="13"> (IsleTemps) Pod2 Hot Isle  1</option><option label=" (IsleTemps) Pod2 Hot Isle  2" value="14"> (IsleTemps) Pod2 Hot Isle  2</option><option label=" (IsleTemps) Pod3 Cold Isle" value="9"> (IsleTemps) Pod3 Cold Isle</option><option label=" (IsleTemps) Pod3 Hot Isle" value="6"> (IsleTemps) Pod3 Hot Isle</option><option label=" (JEJE) ALCJ" value="88"> (JEJE) ALCJ</option><option label=" (JEJE) AVGaS" value="87"> (JEJE) AVGaS</option><option label=" (JEJE) SUM" value="86"> (JEJE) SUM</option><option label=" (PG) Ave12" value="81"> (PG) Ave12</option><option label=" (PG) Ave12Copy" value="82"> (PG) Ave12Copy</option><option label=" (PG) Ave12CopyCopy" value="83"> (PG) Ave12CopyCopy</option><option label=" (PG) DF" value="79"> (PG) DF</option><option label=" (PG) DFCopy" value="80"> (PG) DFCopy</option><option label=" (PhaseBalance) percent Over X" value="23"> (PhaseBalance) percent Over X</option><option label=" (PhaseBalance) percent Over Y" value="22"> (PhaseBalance) percent Over Y</option><option label=" (PhaseBalance) percent Over Z" value="24"> (PhaseBalance) percent Over Z</option><option label=" (PhaseBalance) Perfect Balance" value="21"> (PhaseBalance) Perfect Balance</option><option label=" (Pod1) Cab1" value="58"> (Pod1) Cab1</option><option label=" (Pod1) Cab2" value="59"> (Pod1) Cab2</option><option label=" (Pod1) Cab3" value="60"> (Pod1) Cab3</option><option label=" (PUEFormulas) ACR" value="51"> (PUEFormulas) ACR</option><option label=" (PUEFormulas) DE" value="78"> (PUEFormulas) DE</option><option label=" (PUEFormulas) GSM Aggregate" value="19"> (PUEFormulas) GSM Aggregate</option><option label=" (PUEFormulas) m16" value="72"> (PUEFormulas) m16</option><option label="(PUEFormulas) PUE Differential" value="18"> (PUEFormulas) PUE Differential</option><option label=" (PushToDash) Ideal Current" value="17"> (PushToDash) Ideal Current</option></select>
+                        </div>
+                    </div>
+                </div>
+                 <!---->
+                 <!--<div class="col-lg-12 col-md-12 filtercheckBoxBodyTopmargin" ng-if="widget.jsfunctionname !== 'formula_boolean'">
+	                 <div class="form-group" ng-class="{error: _form.dayformax.$error &amp;&amp; _form.submitted}">
+	                     <label class="control-label col-lg-3 col-md-3 col-sm-3">Max from Days.</label>
+	                     <div class="col-lg-9 col-md-9 col-sm-9">     
+					 		<input name="dayformax" type="number" no-special-char="" oninput="if(value.length>5)value=value.slice(0,5)" ng-model="data.dayformax" placeholder="Days" class="form-control ng-pristine ng-untouched ng-valid ng-empty">
+	                     </div>
+	                 </div>
+	             </div>-->
+                 <!---->
+                <!---->
+                 <div class="col-lg-12 col-md-12">
+                    <div class="form-group" ng-class="{error: _form.UpdateIntervalArray.$error && _form.submitted}">
+                        <label class="control-label col-lg-3 col-md-3 col-sm-3">Update Interval</label>
+                        <div class="col-lg-9 col-md-9 col-sm-9" ng-class="{'wsChangeDropDownPosition': data.updateInterval == 'Second' || data.updateInterval == 'Minute' ||
+                                    data.updateInterval == 'Hour'}">
+                            <select name="UpdateIntervalArray" ng-model="data.updateInterval" class="form-control" required
+                                    ng-options="d for d in form.updateInterval| orderBy:'d'" ng-class="{'wsDropdownChangeWidth': data.updateInterval == 'Second' ||
+                                                    data.updateInterval == 'Minute' || data.updateInterval == 'Hour'}">
+                                <option disabled value="">None*</option>
+                            </select>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <input name="time" ng-model="form.time" class="form-control"  placeholder="time*" ng-if="data.updateInterval == 'Second' ||
+                                    data.updateInterval == 'Minute' || data.updateInterval == 'Hour'" type="number" oninput="if(value.length>5)value=value.slice(0,5)"
+                                    ng-min="(data.updateInterval == 'Second') ? 10 : 1"required no-special-char/>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <!---->
+                <!--<div class="col-lg-12 col-md-12" ng-if="widget.jsfunctionname !== 'formula_boolean'">
+	                <div class="form-group" ng-class="{error: _form.headerColorInput.$error &amp;&amp; _form.submitted}">
+	                    <label class="control-label col-lg-3 col-md-3 col-sm-3">Alert Mode</label>
+	                    <div class="col-lg-5 col-md-5 col-sm-5 admin-check-boxes">
+	                       
+	                      <label for="headerColorInput" class="check-size cheked-color">
+			    			<input name="headerColorInput" id="headerColorInput" class="form-control text-left ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" ng-model="data.headerColorInput"> 
+			    			<span class="ic"></span>
+			    		  </label>-->
+		    		  	   
+		    		      <!--   <input name="headerColorInput" type="checkbox" ng-model="data.headerColorInput" class="form-control text-left"/> -->
+	                    <!--</div>
+	                </div>
+	           	</div>-->
+                <!---->
+            </div>
+            <div class="modal-footer">
+                <!--<a ng-click="remove()" class="btn btn-danger pull-left buttonColor" tabindex="-1"><i class="glyphicon glyphicon-trash"></i>Delete</a>-->
+                <a ng-click="dismiss()" class="btn btn-default buttonColor" tabindex="-1">
+                    <i class="glyphicon glyphicon-remove"></i>Cancel</a>
+                <a type="submit" class="btn btn-default buttonColor" ng-click="SaveSettingForWidget(data, _form)">
+                    <i class="glyphicon glyphicon-ok"></i>Save</a>
+            </div>
+        </form>
+    </div>
+</div>
